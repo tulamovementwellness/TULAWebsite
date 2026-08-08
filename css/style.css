@@ -36,6 +36,14 @@ body{
 
 }
 
+img,
+video,
+picture,
+svg {
+    max-width: 100%;
+    height: auto;
+}
+
 /* ---------- HEADER ---------- */
 
 header{
@@ -507,6 +515,57 @@ nav a:hover{
 
     color:#444;
 
+}
+
+@media (max-width: 900px) {
+    .meet-krista {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 60px 6%;
+    }
+
+    .krista-image {
+        order: 2;
+    }
+
+    .krista-content {
+        order: 1;
+    }
+
+    .krista-image img {
+        height: auto;
+        min-height: 260px;
+    }
+
+    .krista-content h2 {
+        font-size: clamp(2.8rem, 6vw, 3.5rem);
+    }
+
+    .krista-content h3 {
+        font-size: 1rem;
+        letter-spacing: 1.5px;
+    }
+}
+
+@media (max-width: 650px) {
+    .meet-krista {
+        padding: 40px 5%;
+        gap: 30px;
+    }
+
+    .krista-content h2 {
+        font-size: clamp(2.4rem, 8vw, 3rem);
+    }
+
+    .krista-content p {
+        font-size: 1rem;
+    }
+
+    .button {
+        width: 100%;
+        text-align: center;
+        padding: 14px 28px;
+    }
 }
 
 /* ========================= */
@@ -1052,6 +1111,23 @@ nav a.active {
     .detail-page {
         grid-template-columns: 1fr;
     }
+
+    .detail-lower {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .detail-content {
+        padding: 0 6%;
+    }
+
+    .class-format-section {
+        padding: 26px 22px;
+    }
+
+    .pilates-page .detail-side-image {
+        order: -1;
+    }
 }
 
 /* ========================= */
@@ -1229,6 +1305,49 @@ nav a.active {
     color: white;
 }
 
+@media (max-width: 900px) {
+    .contact-wrap {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .contact-section {
+        padding: 20px 6% 100px;
+    }
+
+    .contact-form-wrap {
+        padding: 36px 24px;
+    }
+
+    .contact-form-logo {
+        width: 140px;
+    }
+
+    .contact-submit {
+        width: 100%;
+        padding: 16px 30px;
+    }
+}
+
+@media (max-width: 650px) {
+    .contact-section {
+        padding: 18px 5% 80px;
+    }
+
+    .contact-form-wrap {
+        padding: 28px 20px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 12px 14px;
+    }
+
+    .contact-form-logo {
+        width: 120px;
+    }
+}
+
 /* ========================= */
 /* INSTAGRAM SECTION */
 /* ========================= */
@@ -1352,4 +1471,142 @@ nav a.active {
 .hero .button {
     position: relative;
     z-index: 1;
+}
+
+@media (max-width: 950px) {
+    header {
+        padding: 24px 6% 18px;
+    }
+
+    nav {
+        margin-top: 24px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        gap: 18px;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: .82rem;
+    }
+
+    .hero {
+        margin: 50px auto 30px;
+        padding: 0 20px;
+    }
+
+    .hero-watermark {
+        width: 240px;
+    }
+
+    .button,
+    .contact-submit {
+        padding: 16px 36px;
+    }
+
+    .about {
+        padding: 42px 6%;
+    }
+
+    .about-box {
+        padding: 40px 36px;
+    }
+
+    .about-box h2 {
+        font-size: clamp(2.8rem, 5vw, 3.4rem);
+    }
+
+    .offerings {
+        padding: 70px 6%;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        height: auto;
+        min-height: 260px;
+    }
+
+    .card-content {
+        padding: 28px;
+    }
+
+    .card-content h3 {
+        font-size: 2rem;
+    }
+
+    .section-title,
+    .page-hero h2,
+    .instagram-section h2,
+    .about-box h3 {
+        font-size: clamp(2.4rem, 6vw, 3.2rem);
+    }
+
+    .instagram-section {
+        padding: 70px 6%;
+    }
+}
+
+@media (max-width: 700px) {
+    nav ul {
+        flex-direction: column;
+        gap: 14px;
+        align-items: center;
+    }
+
+    .logo h1 {
+        font-size: 2.4rem;
+        letter-spacing: 8px;
+    }
+
+    .logo p {
+        font-size: .75rem;
+        letter-spacing: 3px;
+        margin-top: -8px;
+    }
+
+    .hero {
+        margin: 40px auto 24px;
+    }
+
+    .hero-watermark {
+        width: 160px;
+        top: 55%;
+    }
+
+    .hero h2 {
+        font-size: clamp(2.2rem, 10vw, 3.2rem);
+    }
+
+    .button,
+    .contact-submit {
+        padding: 14px 30px;
+    }
+
+    .about-box {
+        padding: 32px 22px;
+    }
+
+    .card {
+        min-height: 240px;
+    }
+
+    .card-content h3 {
+        font-size: 1.9rem;
+    }
+
+    .about-box p,
+    .event-content p,
+    .contact-info > p,
+    .class-info p {
+        font-size: 1rem;
+    }
+
+    .instagram-section {
+        padding: 50px 5%;
+    }
 }
