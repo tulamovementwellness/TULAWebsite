@@ -57,8 +57,8 @@
                 </div>
                 <div class="contact-detail-item">
                     <span class="contact-label">Email</span>
-                    <a href="mailto:hello@tulamovementwellness.ca" class="contact-value contact-link">
-                        hello@tulamovementwellness.ca
+                    <a href="mailto:info@tulamovementwellness.ca" class="contact-value contact-link">
+                        info@tulamovementwellness.ca
                     </a>
                 </div>
                 <div class="contact-detail-item">
@@ -78,25 +78,38 @@
 
         <div class="contact-form-wrap">
             <img src="../assets/logos/Tula-ColourLogo.jpg" alt="Tula colour logo" class="contact-form-logo">
-            <form class="contact-form">
+            <div data-fs-success class="form-success" style="display:none;">Thanks — your message has been sent.</div>
+            <div data-fs-error class="form-error" style="display:none;"></div>
+
+            <form id="contact-form" class="contact-form" action="https://formspree.io/f/mqpzyked" method="POST">
+                <input type="hidden" name="_subject" value="Website Contact Form">
                 <div class="form-group">
                     <label for="name">Your Name</label>
-                    <input type="text" id="name" name="name" placeholder="Jane Smith">
+                    <input type="text" id="name" name="name" placeholder="Jane Smith" data-fs-field>
+                    <span data-fs-error="name" class="field-error"></span>
                 </div>
                 <div class="form-group">
                     <label for="email">Your Email</label>
-                    <input type="email" id="email" name="email" placeholder="jane@example.com">
+                    <input type="email" id="email" name="email" placeholder="jane@example.com" data-fs-field required>
+                    <span data-fs-error="email" class="field-error"></span>
                 </div>
                 <div class="form-group">
                     <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="5" placeholder="Tell us how we can help..."></textarea>
+                    <textarea id="message" name="message" rows="5" placeholder="Tell us how we can help..." data-fs-field required></textarea>
+                    <span data-fs-error="message" class="field-error"></span>
                 </div>
-                <button type="submit" class="contact-submit">Send Message</button>
+                <button type="submit" class="contact-submit" data-fs-submit-btn>Send Message</button>
+                <p class="form-help">Or email directly: <a href="mailto:info@tulamovementwellness.ca">info@tulamovementwellness.ca</a></p>
             </form>
         </div>
 
     </div>
 </section>
+    <script>
+        window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+        formspree('initForm', { formElement: '#contact-form', formId: 'mqpzyked' });
+    </script>
+    <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
     <script src="../js/script.js"></script>
 </body>
 </html>

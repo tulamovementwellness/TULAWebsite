@@ -696,6 +696,44 @@ nav a:hover{
     letter-spacing: 0.04em;
 }
 
+/* Responsive embed for Outlook calendar */
+.calendar-embed .embed-responsive{
+    position:relative;
+    width:100%;
+    padding-bottom:56.25%; /* 16:9 aspect ratio */
+    height:0;
+    overflow:hidden;
+}
+.calendar-embed .embed-responsive iframe{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    border:0;
+}
+
+/* Signup instructions spacing and centered action buttons */
+.signup-instructions{
+    margin:12px 0 18px;
+    padding-left:18px;
+    color:#444;
+}
+.signup-instructions li{
+    margin-bottom:12px;
+    line-height:1.6;
+}
+.detail-actions.center{
+    text-align:center;
+}
+/* Make the How to Book heading the same size as the list text */
+.how-to-book h3{
+    font-size:1.15rem;
+    font-family:Poppins, sans-serif;
+    font-weight:600;
+    margin-bottom:12px;
+}
+
 .event-grid{
 
     display:grid;
